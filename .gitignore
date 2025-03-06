@@ -1,0 +1,8 @@
+*.tfvars
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfstate.*.backup
+samlapi_formauth.py
+.DS_Store
+.terraform.lock.hcl
