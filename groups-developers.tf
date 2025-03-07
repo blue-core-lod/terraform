@@ -71,6 +71,7 @@ data "aws_iam_policy_document" "developers" {
       "codecommit:*",
       "codedeploy:*",
       "codepipeline:*",
+      "dynamodb:*",
       "ec2:*",
       "ecr:*",
       "ecs:*",
