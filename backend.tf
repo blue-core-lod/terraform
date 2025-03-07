@@ -4,7 +4,6 @@ terraform {
     key            = "root/terraform.tfstate"
     region         = "us-west-2"
     encrypt        = true
-    use_lockfile   = true
     profile        = "bluecore"
     dynamodb_table = "bluecore_tf_lockid"
   }
