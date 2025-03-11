@@ -8,8 +8,6 @@ USER airflow
 
 ENV PYTHONPATH "${PYTHONPATH}:/opt/airflow"
 
-#COPY airflow.cfg /opt/airflow
-
 RUN git clone https://github.com/blue-core-lod/bluecore-workflows.git --depth 1 /opt/airflow/bluecore-workflows
 
 RUN mv bluecore-workflows/README.md /opt/airflow/. && mv bluecore-workflows/uv.lock /opt/airflow/. && mv bluecore-workflows/pyproject.toml /opt/airflow/.
@@ -17,4 +15,4 @@ RUN mv bluecore-workflows/README.md /opt/airflow/. && mv bluecore-workflows/uv.l
 RUN mv bluecore-workflows/ils_middleware /opt/airflow/ils_middleware && rm -rf bluecore-workflows
 
 RUN uv build
-RUN uv sync
+RUN uv pip install dist/*.whl
