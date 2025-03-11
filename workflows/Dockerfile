@@ -8,7 +8,7 @@ USER airflow
 
 ENV PYTHONPATH "${PYTHONPATH}:/opt/airflow"
 
-COPY airflow.cfg /opt/airflow
+#COPY airflow.cfg /opt/airflow
 
 RUN git clone https://github.com/blue-core-lod/bluecore-workflows.git --depth 1 /opt/airflow/bluecore-workflows
 
