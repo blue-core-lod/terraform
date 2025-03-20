@@ -6,6 +6,11 @@ resource "aws_instance" "bluecore_dev" {
   associate_public_ip_address = "true"
   key_name                    = "bc-dev"
 
+  root_block_device {
+    volume_type = "gp2"
+    volume_size = 120
+  }
+
   tags = {
     name      = "bluecore_dev"
     terraform = "true"
